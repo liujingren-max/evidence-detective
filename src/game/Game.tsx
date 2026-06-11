@@ -28,9 +28,10 @@ export function Game({ entry }: { entry: CaseEntry }) {
     [entry],
   )
   const [sideA, sideB] = entry.sides
-  const Scene = entry.Scene
 
   const [screen, setScreen] = useState<Screen>('intake')
+  const [sceneStyle, setSceneStyle] = useState<'hifi' | 'midfi'>('hifi')
+  const Scene = sceneStyle === 'hifi' ? entry.SceneHiFi : entry.SceneMidFi
   const [inspected, setInspected] = useState<ReadonlySet<string>>(new Set())
   const [gradings, setGradings] = useState<Record<string, Grading>>({})
   const [active, setActive] = useState<string | null>(null)
@@ -454,6 +455,25 @@ export function Game({ entry }: { entry: CaseEntry }) {
           <span className="case-no">{entry.caseNo} · {entry.title}</span>
           <StepNav />
           <span className="counter">Clues: {inspected.size} / {entry.evidence.length}</span>
+          <div className="art-toggle" role="group" aria-label="Scene art style">
+            {(
+              [
+                ['hifi', 'Illustrated'],
+                ['midfi', 'Mid-fi demo'],
+              ] as const
+            ).map(([style, label]) => (
+              <button
+                key={style}
+                className={'art-pick' + (sceneStyle === style ? ' art-on' : '')}
+                onClick={() => {
+                  setSceneStyle(style)
+                  logEvent('scene_style', { style })
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
           <label className="hints-toggle">
             <input type="checkbox" checked={hints} onChange={(e) => setHints(e.target.checked)} />
             Hints

@@ -50,7 +50,10 @@ export interface CaseData {
 }
 
 export interface CaseEntry extends CaseData {
-  Scene: FC<SceneProps>
+  /** Default illustrated scene */
+  SceneHiFi: FC<SceneProps>
+  /** Original flat prototype scene, kept selectable as "Mid-fi demo" */
+  SceneMidFi: FC<SceneProps>
 }
 
 export interface Grading {
