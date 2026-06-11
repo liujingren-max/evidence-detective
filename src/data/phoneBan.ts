@@ -59,15 +59,15 @@ export const phoneBan: CaseData = {
     },
     {
       id: 'chat',
-      object: "Flyer on the counselor's wall",
+      object: 'Note taped on the classroom wall',
       snippet:
-        'A screenshot of a group chat — bullying messages, all sent during class hours.',
+        '"Students checked their phones 47 times on average during yesterday\'s lesson." — Ms. Park tracked her own class for a day.',
       side: 'ban',
       strength: 'medium',
-      type: 'anecdote',
-      note: 'Bullying in a class group chat',
+      type: 'statistic',
+      note: '47 phone checks in one lesson',
       essaySentence:
-        "A counselor's flyer shows bullying messages sent in a group chat during class hours.",
+        'Ms. Park tracked her class for a day and found students checked their phones an average of 47 times during a single lesson.',
     },
     {
       id: 'lunch',
@@ -105,7 +105,7 @@ export const phoneBan: CaseData = {
     },
     {
       id: 'laptops',
-      object: 'Notice on the library door',
+      object: 'Sign on the hallway wall',
       snippet: '“Only 12 laptops for 30 students — please use your own device for research.”',
       side: 'allow',
       strength: 'strong',

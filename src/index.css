@@ -96,11 +96,15 @@ button { font: inherit; cursor: pointer; }
 
 .hotspot { cursor: pointer; outline: none; }
 .hotspot:hover, .hotspot:focus-visible { filter: drop-shadow(0 0 6px rgba(24, 95, 165, 0.95)); }
-.hotspot.done { opacity: 0.55; }
 .glint {
   fill: #fac775; stroke: #854f0b; stroke-width: 1;
   animation: glint-pulse 1.8s ease-in-out infinite;
   transform-box: fill-box; transform-origin: center;
+  pointer-events: none;
+}
+.glint-done {
+  fill: #fac775; stroke: #854f0b; stroke-width: 1;
+  opacity: 0.5;
   pointer-events: none;
 }
 @keyframes glint-pulse {

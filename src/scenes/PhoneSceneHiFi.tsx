@@ -15,7 +15,10 @@ export const PhoneSceneHiFi: FC<SceneProps> = ({ discovered, hints, onInspect })
       onKeyDown={(e) => e.key === 'Enter' && onInspect(id)}
     >
       <rect x={x} y={y} width={w} height={h} rx="6" fill="transparent" />
-      {hints && !discovered.has(id) && <circle className="glint" cx={gx} cy={gy} r={6} />}
+      {discovered.has(id)
+        ? <circle className="glint-done" cx={gx} cy={gy} r={5} />
+        : <circle className="glint" cx={gx} cy={gy} r={6} />
+      }
     </g>
   )
 
@@ -36,48 +39,48 @@ export const PhoneSceneHiFi: FC<SceneProps> = ({ discovered, hints, onInspect })
       {/* — CLASSROOM (left half) — */}
 
       {/* research printout taped on wall right of blackboard */}
-      <Spot id="study"    gx={270} gy={137} x={240} y={112} w={65}  h={62} />
+      <Spot id="study"     gx={334} gy={145} x={302} y={114} w={ 65} h={ 62} />
 
-      {/* counsellor's flyer below printout */}
-      <Spot id="chat"     gx={267} gy={196} x={238} y={170} w={65}  h={68} />
+      {/* phone-use tally on classroom wall */}
+      <Spot id="chat"      gx={232} gy={170} x={200} y={136} w={ 65} h={ 68} />
 
-      {/* tally sheet on teacher's desk surface */}
-      <Spot id="tally"    gx={116} gy={316} x={88}  y={292} w={65}  h={48} />
+      {/* tally sheet on teacher's desk */}
+      <Spot id="tally"     gx={ 57} gy={333} x={ 25} y={309} w={ 65} h={ 48} />
 
       {/* orange binder on teacher's desk */}
-      <Spot id="refocus"  gx={175} gy={312} x={148} y={288} w={62}  h={55} />
+      <Spot id="refocus"   gx={167} gy={318} x={136} y={291} w={ 62} h={ 55} />
 
       {/* phone open to translate app on student desk */}
-      <Spot id="translate" gx={349} gy={314} x={324} y={290} w={52} h={52} />
+      <Spot id="translate" gx={267} gy={344} x={241} y={318} w={ 52} h={ 52} />
 
       {/* purple backpack on floor */}
-      <Spot id="glucose"  gx={322} gy={398} x={290} y={368} w={78}  h={72} />
+      <Spot id="glucose"   gx={251} gy={451} x={212} y={415} w={ 78} h={ 72} />
 
       {/* — HALLWAY (right half) — */}
 
       {/* yellow safety-alert poster on lockers */}
-      <Spot id="alert"    gx={493} gy={220} x={462} y={192} w={70}  h={68} />
+      <Spot id="alert"     gx={491} gy={216} x={456} y={182} w={ 70} h={ 68} />
 
       {/* bulletin board — newspaper clipping */}
-      <Spot id="lunch"    gx={623} gy={228} x={596} y={200} w={68}  h={62} />
+      <Spot id="lunch"     gx={623} gy={228} x={589} y={197} w={ 68} h={ 62} />
 
       {/* bulletin board — yellow detention memo */}
-      <Spot id="detention" gx={699} gy={240} x={672} y={212} w={62} h={58} />
+      <Spot id="detention" gx={699} gy={240} x={668} y={211} w={ 62} h={ 58} />
 
       {/* pink scarf on bench */}
-      <Spot id="scarf"    gx={644} gy={318} x={610} y={290} w={80}  h={62} />
+      <Spot id="scarf"     gx={654} gy={318} x={614} y={287} w={ 80} h={ 62} />
 
-      {/* clipboard on/near bench */}
-      <Spot id="survey"   gx={712} gy={316} x={684} y={288} w={68}  h={62} />
+      {/* Chromebook shortage sign on hallway wall */}
+      <Spot id="laptops"   gx={734} gy={343} x={708} y={317} w={ 52} h={ 52} />
+
+      {/* PTA clipboard */}
+      <Spot id="survey"    gx={829} gy={261} x={795} y={230} w={ 68} h={ 62} />
 
       {/* cracked phone on hallway floor */}
-      <Spot id="cracked"  gx={479} gy={400} x={452} y={374} w={62}  h={52} />
+      <Spot id="cracked"   gx={529} gy={486} x={498} y={460} w={ 62} h={ 52} />
 
-      {/* vending machine (right wall) */}
-      <Spot id="vending"  gx={808} gy={318} x={778} y={230} w={88}  h={170} />
-
-      {/* notice on library door */}
-      <Spot id="laptops"  gx={883} gy={295} x={858} y={212} w={52}  h={52} />
+      {/* vending machine */}
+      <Spot id="vending"   gx={889} gy={312} x={845} y={227} w={ 88} h={170} />
     </svg>
   )
 }
