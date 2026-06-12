@@ -31,8 +31,8 @@ const PHONE_SPOTS: Spot[] = [
   { id: 'lunch',     gx: 623, gy: 228, w: 68,  h: 62  },
   { id: 'detention', gx: 699, gy: 240, w: 62,  h: 58  },
   { id: 'scarf',     gx: 654, gy: 318, w: 80,  h: 62  },
-  { id: 'laptops',   gx: 734, gy: 343, w: 52,  h: 52  },
-  { id: 'survey',    gx: 829, gy: 261, w: 68,  h: 62  },
+  { id: 'laptops',   gx: 829, gy: 261, w: 68,  h: 62  },
+  { id: 'survey',    gx: 734, gy: 343, w: 52,  h: 52  },
   { id: 'cracked',   gx: 529, gy: 486, w: 62,  h: 52  },
   { id: 'vending',   gx: 889, gy: 312, w: 88,  h: 170 },
 ]

@@ -71,10 +71,10 @@ export const PhoneSceneHiFi: FC<SceneProps> = ({ discovered, hints, onInspect })
       <Spot id="scarf"     gx={654} gy={318} x={614} y={287} w={ 80} h={ 62} />
 
       {/* Chromebook shortage sign on hallway wall */}
-      <Spot id="laptops"   gx={734} gy={343} x={708} y={317} w={ 52} h={ 52} />
+      <Spot id="laptops"   gx={829} gy={261} x={795} y={230} w={ 68} h={ 62} />
 
       {/* PTA clipboard */}
-      <Spot id="survey"    gx={829} gy={261} x={795} y={230} w={ 68} h={ 62} />
+      <Spot id="survey"    gx={734} gy={343} x={708} y={317} w={ 52} h={ 52} />
 
       {/* cracked phone on hallway floor */}
       <Spot id="cracked"   gx={529} gy={486} x={498} y={460} w={ 62} h={ 52} />
